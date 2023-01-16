@@ -36,13 +36,11 @@ func unpack(target string) {
 			} else {
 				compare = int(target[i] - '0' - 1)
 			}
-
 			for count := 0; count < compare; count++ {
 				byteArray = append(byteArray, target[i-1])
 			}
-
 		} else {
-			if target[i] != '\\' && target[i] != '\\' {
+			if target[i] != '\\' {
 				byteArray = append(byteArray, target[i])
 			}
 		}
